@@ -15,11 +15,11 @@ class App extends Component {
     };
     render() {
         return (
-            <div>
+            <section>
                 <WeatherCard forecast={this.state.forecast_1} today={this.state.today}/>
                 <WeatherCard forecast={this.state.forecast_2} today={this.state.today}/>
                 <WeatherCard forecast={this.state.forecast_3} today={this.state.today}/>
-            </div>
+            </section>
         )
 
     }

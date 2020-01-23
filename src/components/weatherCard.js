@@ -25,7 +25,7 @@ function WeatherCard(props) {
             </div>
         )
     }
-    return <h1>loading...</h1>;
+    return <h1>Loading...</h1>;
 }
 
 export default WeatherCard;
