@@ -3,7 +3,7 @@ import ForecastCard from './forecastCard';
 
 function WeatherCard(props) {
     if(props.forecast) {
-        const next_three_days = props.forecast.list.slice(0, 12);
+        const next_three_days = props.forecast.list.slice(0, 24);
         const forecastByHour = next_three_days.map((inc) =>
             <ForecastCard key={inc.dt.toString()} forecast={inc}/>
         );
