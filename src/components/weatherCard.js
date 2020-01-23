@@ -8,7 +8,7 @@ function WeatherCard(props) {
             <ForecastCard key={inc.dt.toString()} forecast={inc}/>
         );
         return (
-            <div className="card is-3">
+            <div className="card">
                 <header className="card-header list">
                     <h2 className="card-header-title list-item">
                         {props.forecast.city.name}
@@ -17,7 +17,7 @@ function WeatherCard(props) {
                 </header>
                 <div className="card-content">
                     <div className="content">
-                        <div class="is-grid">
+                        <div className="is-grid">
                             {forecastByHour}
                         </div>
                     </div>
