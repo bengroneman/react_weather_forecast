@@ -1,8 +1,7 @@
 import React from 'react';
 import formatDate from "../formatDate";
 
-function DayCard(props) {
-    const rain = props.forecast.rain;
+function ForecastCard(props) {
     return (
         <div className="box column">
             <h6 className="is-size-6">
@@ -21,15 +20,8 @@ function DayCard(props) {
                     <h6 key={index + w.id}>{w.description}</h6>
                 )}
             </div>
-            <div>
-
-            </div>
         </div>
     )
 }
 
-function checkForPrecipitation(rain, snow) {
-    if (rain || snow) {return [rain, snow]}
-}
-
-export default DayCard;
+export default ForecastCard;

@@ -6,8 +6,6 @@ import formatDate from './formatDate';
 
 import WeatherCard from './components/weatherCard.js';
 
-const LOCATIONS = ['Lander', 'Laramie', 'Yellowstone County'];
-
 class App extends Component {
     state = {
         forecast_1: null,
@@ -31,8 +29,5 @@ class App extends Component {
         fetchForecast('Yellowstone County').then(resolve => this.setState({forecast_3: resolve}));
     }
 }
-
-//fetchForecast('Lander').then(console.log);
-//console.log(formatDate(new Date()));
 
 ReactDOM.render(<App />, document.getElementById('root'));

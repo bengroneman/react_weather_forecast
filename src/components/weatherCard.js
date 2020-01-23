@@ -1,11 +1,11 @@
 import React from 'react';
-import DayCard from './dayCard';
+import ForecastCard from './forecastCard';
 
 function WeatherCard(props) {
-    if(props.forecast !== null) {
-        const next_six_hours = props.forecast.list.slice(0, 6);
-        const forecastByHour = next_six_hours.map((inc) =>
-            <DayCard key={inc.dt.toString()} forecast={inc}/>
+    if(props.forecast) {
+        const next_three_days = props.forecast.list.slice(0, 12);
+        const forecastByHour = next_three_days.map((inc) =>
+            <ForecastCard key={inc.dt.toString()} forecast={inc}/>
         );
         return (
             <div className="card is-3">
@@ -14,11 +14,10 @@ function WeatherCard(props) {
                         {props.forecast.city.name}
                     </h2>
                     <p className="list-item">Today:<time dateTime="2020-1-1"> {props.today}</time></p>
-                    <p className="list-item"></p>
                 </header>
                 <div className="card-content">
                     <div className="content">
-                        <div className="columns">
+                        <div class="is-grid">
                             {forecastByHour}
                         </div>
                     </div>
